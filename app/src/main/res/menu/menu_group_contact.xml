@@ -2,6 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.sarin.contactlist.GroupContact">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_add"
+        android:icon="@drawable/ic_database_plus_grey600_48dp"
+        android:title="add"
+        android:showAsAction="ifRoom"/>
 </menu>
