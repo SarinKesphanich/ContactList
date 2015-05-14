@@ -34,6 +34,10 @@
             android:name=".GroupContact"
             android:label="@string/title_activity_group_contact" >
         </activity>
+        <activity
+            android:name=".ContactList"
+            android:label="@string/title_activity_contact_list" >
+        </activity>
     </application>
 
 </manifest>

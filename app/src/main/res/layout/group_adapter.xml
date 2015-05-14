@@ -11,7 +11,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="72dp"
             android:layout_marginLeft="-10dp"
             android:background="#fff5f5ea">
 
@@ -22,9 +22,10 @@
                 android:id="@+id/groupName"
                 android:layout_gravity="center_horizontal|top"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="5dp"
                 android:textColor="#ff020202"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/groupId" />
 
             <TextView
                 android:layout_width="wrap_content"
