@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sarin.contactlist.ContactDetail">
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="#fff5f5ea"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="87dp"
+            android:layout_height="85dp"
+            android:layout_gravity="left|top"
+            android:id="@+id/img_detail" />
+
+        <TextView
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/fullname"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="25dp"
+            android:textSize="25dp"
+            android:layout_marginLeft="110dp"
+            android:textColor="#ff020202"
+            android:background="#ffeaeaea" />
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1"
+            android:id="@+id/textView2"
+            android:layout_alignBottom="@+id/menuPrice"
+            android:layout_alignStart="@+id/telLabel"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="100dp"
+            android:textColor="#ff020202"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignParentStart="true">
+
+        <ListView
+            android:layout_width="170.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/telListView" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailListView" />
+    </LinearLayout>
+
+</RelativeLayout>

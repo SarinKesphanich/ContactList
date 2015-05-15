@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -66,6 +67,12 @@ public class GroupContact extends Activity {
         editInput.setId(R.id.gEditNameAlert);
         createAlert();
         createEditAlert();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getGroup();
     }
 
     @Override
@@ -414,7 +421,6 @@ public class GroupContact extends Activity {
                 break;
             case 1:
                 delGroup(groupid);
-                //getGroup();
                 break;
             case 2:
                 nevigateToContactList(groupid);
@@ -423,6 +429,8 @@ public class GroupContact extends Activity {
     }
 
     private void nevigateToContactList(int groupid) {
-
+        Intent data = new Intent(this, ContactList.class);
+        data.putExtra("groupid", groupid);
+        startActivity(data);
     }
 }

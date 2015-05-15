@@ -38,6 +38,10 @@
             android:name=".ContactList"
             android:label="@string/title_activity_contact_list" >
         </activity>
+        <activity
+            android:name=".ContactDetail"
+            android:label="@string/title_activity_contact_detail" >
+        </activity>
     </application>
 
 </manifest>

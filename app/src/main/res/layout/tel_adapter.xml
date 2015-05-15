@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <FrameLayout
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_width="170.5dp"
+        android:layout_height="60dp"
         android:weightSum="1" android:background="#fff5f5ea">
 
 
         <TextView
-            android:layout_width="229dp"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/telNumber"
+            android:id="@+id/telLabel"
             android:layout_gravity="left|top"
-            android:layout_marginTop="25dp"
-            android:textSize="25dp"
-            android:layout_marginLeft="110dp"
-            android:textColor="#ff020202" />
-
-        <ImageView
-            android:layout_width="87dp"
-            android:layout_height="85dp"
-            android:layout_gravity="left|top"
-            android:id="@+id/ivImage"></ImageView>
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ff020202"
+            android:text="Home" />
 
         <TextView
             android:layout_width="24dp"
@@ -41,6 +34,17 @@
             android:textColor="#ff020202"
             android:visibility="gone" />
 
+        <TextView
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/telNumber"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="0dp"
+            android:textColor="#ff020202"
+            android:text="081-840-3445" />
+
     </FrameLayout>
 </RelativeLayout>
-

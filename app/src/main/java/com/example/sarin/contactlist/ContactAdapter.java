@@ -8,25 +8,23 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.security.acl.Group;
 import java.util.ArrayList;
-import java.util.List;
 
-    /**
-     * Created by Sarin on 13/5/2558.
-     */
-public class GroupAdapter extends ArrayAdapter<Groups> {
-    ArrayList<Groups> groupList;
+/**
+ * Created by Sarin on 14/5/2558.
+ */
+public class ContactAdapter extends ArrayAdapter<Contacts>{
+    ArrayList<Contacts> contactList;
     LayoutInflater vi;
     int Resource;
     ViewHolder holder;
 
-    public GroupAdapter(Context context, int resource, ArrayList<Groups> objects) {
+    public ContactAdapter(Context context, int resource, ArrayList<Contacts> objects) {
         super(context, resource, objects);
         vi = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         Resource = resource;
-        groupList = objects;
+        contactList = objects;
     }
 
     @Override
@@ -36,23 +34,26 @@ public class GroupAdapter extends ArrayAdapter<Groups> {
         if (v == null) {
             holder = new ViewHolder();
             v = vi.inflate(Resource, null);
-            holder.groupId = (TextView) v.findViewById(R.id.groupId);
-            holder.groupName = (TextView) v.findViewById(R.id.groupName);
-            holder.groupAmount = (TextView) v.findViewById(R.id.groupAmount);
+            holder.contactId = (TextView) v.findViewById(R.id.contactId);
+            holder.contactName = (TextView) v.findViewById(R.id.telNumber);
+            holder.contactImg = (ImageView) v.findViewById(R.id.ivImage);
             v.setTag(holder);
         } else {
             holder = (ViewHolder) v.getTag();
         }
 
-        holder.groupId.setText(String.valueOf(groupList.get(position).getId()));
-        holder.groupName.setText(groupList.get(position).getName());
-        holder.groupAmount.setText(String.valueOf(groupList.get(position).getAmount()));
+        holder.contactImg.setImageResource(R.mipmap.ic_launcher);
+        new DownloadImageTask(holder.contactImg).execute(contactList.get(position).getImg());
+
+        holder.contactId.setText(String.valueOf(contactList.get(position).getId()));
+        holder.contactName.setText(contactList.get(position).getName());
         return v;
     }
 
 
     static class ViewHolder {
-        public TextView groupName, groupAmount, groupId;
+        public TextView contactName, contactId;
+        public ImageView contactImg;
 
     }
 }
